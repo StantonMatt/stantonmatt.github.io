@@ -8,7 +8,7 @@ workflow:
 default:
   image: alpine:3.22
   tags:
-    - ci-public
+    - saas-linux-small-amd64
   interruptible: true
 
 .site:
