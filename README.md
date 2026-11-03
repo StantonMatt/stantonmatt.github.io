@@ -1,14 +1,12 @@
 # Personal MCP Gateway site
 
-Home: https://stantonmatthewj.gitlab.io/
+Home: https://stantonmatt.gitlab.io/
 
-- Privacy policy: https://stantonmatthewj.gitlab.io/privacy.html
-- Terms of service: https://stantonmatthewj.gitlab.io/terms.html
+- Privacy policy: https://stantonmatt.gitlab.io/privacy.html
+- Terms of service: https://stantonmatt.gitlab.io/terms.html
 
 The GitLab project is
-[stantonmatthewj/stantonmatthewj.gitlab.io](https://gitlab.com/stantonmatthewj/stantonmatthewj.gitlab.io).
-GitLab redirects its former project path, `stantonmatthewj/stantonmatt.github.io`,
-to this project. That redirect does not redirect the old GitHub Pages website.
+[StantonMatt/stantonmatt.gitlab.io](https://gitlab.com/StantonMatt/stantonmatt.gitlab.io).
 The local folder remains `stantonmatt.github.io`.
 
 ## CI and Pages
