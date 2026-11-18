@@ -1,29 +1,32 @@
 # Personal MCP Gateway site
 
-Home: https://stantonmatt.gitlab.io/
+Home: https://stantonmatt.github.io/
 
-- Privacy policy: https://stantonmatt.gitlab.io/privacy.html
-- Terms of service: https://stantonmatt.gitlab.io/terms.html
+- Privacy policy: https://stantonmatt.github.io/privacy.html
+- Terms of service: https://stantonmatt.github.io/terms.html
 
-The GitLab project is
+The primary repository is
+[StantonMatt/stantonmatt.github.io](https://github.com/StantonMatt/stantonmatt.github.io).
+The GitLab repository has a different name:
 [StantonMatt/stantonmatt.gitlab.io](https://gitlab.com/StantonMatt/stantonmatt.gitlab.io).
-The local folder remains `stantonmatt.github.io`.
 
-## CI and Pages
+## Pages
 
-`.gitlab-ci.yml` checks the static copy for merge requests and publishes pushes
-to `main` using an Alpine image on the `ci-public` Docker runner. Only
-`index.html`, `privacy.html`, `terms.html`, `style.css` and `.nojekyll` enter the
-`public/` artifact. All site links are relative, so no base-path change is needed.
-Keep the Google site verification meta tag in `index.html`.
+GitHub Pages serves the root of `main` directly. The site is plain HTML and CSS;
+`.nojekyll` disables Jekyll processing, so no build workflow is needed. Keep
+`index.html`, `privacy.html`, `terms.html`, `style.css` and `.nojekyll` at the root.
+All site links are relative. Keep both Google site verification meta tags in
+`index.html`.
 
-Google Auth Platform branding links and domain verification must be updated
-separately in the Google Cloud console when the new site is online.
+Before publishing, check that the HTML and CSS files are nonempty and that local
+links resolve. The former GitLab pipeline only copied these files and checked
+their presence; it did not compile or transform them.
 
-## If moving back to GitHub
+GitLab CI/CD is disabled. The already-published GitLab Pages site remains at
+https://stantonmatt.gitlab.io/ and will not receive new deployments while CI is
+disabled. Check Google Auth Platform branding links and domain verification
+separately in the Google Cloud console when changing the site's public domain.
 
-The `github` remote is retained. Restore it as `origin`, enable GitHub Pages
-from the root of `main`, and point links back to https://stantonmatt.github.io/.
-This repository had no `.github/workflows` to preserve. If GitHub workflows
-are added later, they are inactive while GitLab hosts CI and must be kept in
-sync by hand if switching back.
+Local remotes use `origin` for GitHub and `gitlab` for GitLab. The different
+repository names require mirror name mapping; do not add this repository to a
+same-name mirror list.
